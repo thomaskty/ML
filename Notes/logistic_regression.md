@@ -98,8 +98,12 @@ P(Y_i = y_i \mid X_i = x_i)
 \end{align*}
 $$
 
-where  
-$p_i = P(Y_i=1 \mid X_i=x_i)$.
+$$\LARGE
+\begin{align*}
+p_i = P(Y_i=1 \mid X_i=x_i)
+\end{align*}
+$$ 
+
 
 Assuming **conditional independence** of observations given $X$, the likelihood for the full dataset $\{(x_i,y_i)\}_{i=1}^n$ is the product of individual likelihoods:
 
@@ -151,9 +155,7 @@ $$\LARGE
 \end{align*}
 $$
 
-
 The negative log-likelihood above is known in machine learning as the **binary cross-entropy loss** (or log loss).
-
 For a single observation, the loss is:
 
 $$\LARGE
@@ -164,7 +166,6 @@ $$\LARGE
 $$
 
 For the full dataset:
-
 $$\LARGE
 \begin{align*}
 \text{BCE}(\beta)
