@@ -3,8 +3,8 @@
 * Discriminative probabiliy classifier
 * Models the probability of a binary outcome as a smooth function of predictors, constrained between 0 and 1.
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 Y \in \{0,1\}\\
 P(Y=1) =p\\
 P(Y=0) = 1-p\\
@@ -20,8 +20,8 @@ Why is log-odds the natural parameter of bernoulli distribution?
 
 Consider; $p^y(1-p)^{1-y}$, lets write it in exponential form; 
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 p^y(1-p)^{1-y} &= exp(y\log{p} + (1-y) \log{1-p}))
 \\ &= exp(y\log{p} + \log(1-p) - y\log{1-p})
 \\ &= exp(y\log{\frac{p}{1-p}}+ \log{1-p})
@@ -29,14 +29,16 @@ p^y(1-p)^{1-y} &= exp(y\log{p} + (1-y) \log{1-p}))
 $$
 
 Canonical exponential form is as follows ; 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 f(y|\theta) = exp(y\theta - A(\theta))
 \end{align*}
 $$
+
 So, based on our exponential form of bernoulli, 
-$$
-\begin{align*}\LARGE
+
+$$\LARGE
+\begin{align*}
 \theta = \log{\frac{p}{1-p}}
 \\ -A(\theta) = \log{1-p}
 \end{align*}
@@ -46,15 +48,15 @@ So, $\log{\frac{p}{1-p}}$ is a natural parameter.
 ### Introducing Covariates: Conditional Bernoulli
 Once predictors exist, we are no longer modeling p, but
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 p(x) = P(Y=1|X=x)
 \end{align*}
 $$
 
 So, the natural parameter becomes conditional; 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 \theta(x) = \log{(\frac{p(x)}{1-p(x)})}
 \end{align*}
 $$
