@@ -163,7 +163,7 @@ $$
 
 For the full dataset:
 
-$$
+$$\LARGE
 \begin{align*}\LARGE
 \text{BCE}(\beta)
 &= \sum_{i=1}^{n} \text{BCE}(y_i, p_i)
