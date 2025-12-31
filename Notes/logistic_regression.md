@@ -61,8 +61,8 @@ $$
 
 **We make one structural assumption: The natural parameter depends linearly on predictors**
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 \theta(x) = \beta_0 + \beta^Tx
 \end{align*}
 $$
@@ -73,8 +73,8 @@ $$
 
 When we plug back the theta value into $p(x)$;
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 p(x) = \frac{1}{1+e^{-(\beta_0+\beta^Tx)}}
 \end{align*}
 $$
@@ -89,8 +89,8 @@ $$
 ### Likelihood, Log-Likelihood, and Cross-Entropy Loss
 For a single observation $(x_i, y_i)$ with $y_i \in \{0,1\}$, the Bernoulli probability mass function is:
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 P(Y_i = y_i \mid X_i = x_i)
 &= p_i^{y_i}(1-p_i)^{1-y_i}
 \end{align*}
@@ -101,8 +101,8 @@ $p_i = P(Y_i=1 \mid X_i=x_i)$.
 
 Assuming **conditional independence** of observations given $X$, the likelihood for the full dataset $\{(x_i,y_i)\}_{i=1}^n$ is the product of individual likelihoods:
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 L(\beta)
 &= \prod_{i=1}^{n} p_i^{y_i}(1-p_i)^{1-y_i}
 \end{align*}
@@ -110,8 +110,8 @@ $$
 
 Here, the probabilities $p_i$ are modeled using the logistic function:
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 p_i
 &= \frac{1}{1 + \exp(-\eta_i)}\\
 \eta_i
@@ -121,8 +121,8 @@ $$
 
 Since the log function is monotonic, maximizing the likelihood is equivalent to maximizing the log-likelihood.
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 \ell(\beta)
 &= \log L(\beta)\\
 &= \sum_{i=1}^{n} \left[ y_i \log(p_i) + (1-y_i)\log(1-p_i) \right]
@@ -132,8 +132,8 @@ $$
 This is the **log-likelihood** of logistic regression.
 In optimization, it is common to convert a maximization problem into a minimization problem. We therefore define the **negative log-likelihood (NLL)**:
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 \mathcal{L}(\beta)
 &= -\ell(\beta) \\
 &= - \sum_{i=1}^{n} \left[ y_i \log(p_i) + (1-y_i)\log(1-p_i) \right]
@@ -142,8 +142,8 @@ $$
 
 The goal of logistic regression is:
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 \hat{\beta}
 = \arg\min_{\beta} \; \mathcal{L}(\beta)
 \end{align*}
@@ -154,8 +154,8 @@ The negative log-likelihood above is known in machine learning as the **binary c
 
 For a single observation, the loss is:
 
-$$
-\begin{align*}\LARGE
+$$\LARGE
+\begin{align*}
 \text{BCE}(y_i, p_i)
 &= - \left[ y_i \log(p_i) + (1-y_i)\log(1-p_i) \right]
 \end{align*}
@@ -164,7 +164,7 @@ $$
 For the full dataset:
 
 $$\LARGE
-\begin{align*}\LARGE
+\begin{align*}
 \text{BCE}(\beta)
 &= \sum_{i=1}^{n} \text{BCE}(y_i, p_i)
 \end{align*}
