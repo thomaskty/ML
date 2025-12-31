@@ -5,10 +5,10 @@
 
 $$
 \begin{equation}
-Y &\in \{0,1\}
-P(Y=1)&=p
-P(Y=0) &= 1-p
-P(Y=y) &= p^y(1-p)^{1-y}
+Y \in \{0,1\}
+P(Y=1) =p
+P(Y=0) = 1-p
+P(Y=y) = p^y(1-p)^{1-y}
 \end{equation}
 $$
 Why is log-odds the natural parameter of bernoulli distribution? 
