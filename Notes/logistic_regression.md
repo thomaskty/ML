@@ -22,9 +22,9 @@ Consider; $p^y(1-p)^{1-y}$, lets write it in exponential form;
 
 $$\LARGE
 \begin{align*}
-p^y(1-p)^{1-y} &= exp(y\log{p} + (1-y) \log{1-p}))
-\\ &= exp(y\log{p} + \log(1-p) - y\log{1-p})
-\\ &= exp(y\log{\frac{p}{1-p}}+ \log{1-p})
+p^y(1-p)^{1-y} &= exp(y\log{p} + (1-y) \log{1-p}))\\
+&= exp(y\log{p} + \log(1-p) - y\log{1-p})\\
+&= exp(y\log{\frac{p}{1-p}}+ \log{1-p})\\
 \end{align*}
 $$
 
