@@ -4,13 +4,18 @@
 * Models the probability of a binary outcome as a smooth function of predictors, constrained between 0 and 1.
 
 $$
-\begin{equation}
+\begin{align*}
 Y \in \{0,1\}
+
 P(Y=1) =p
+
 P(Y=0) = 1-p
+
 P(Y=y) = p^y(1-p)^{1-y}
-\end{equation}
+
+\end{align*}
 $$
+
 Why is log-odds the natural parameter of bernoulli distribution? 
  * We start with bernoulli pdf 
  * Write it in exponential form 
