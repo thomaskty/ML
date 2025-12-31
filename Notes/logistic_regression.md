@@ -39,7 +39,7 @@ So, based on our exponential form of bernoulli,
 
 $$\LARGE
 \begin{align*}
-\theta = \log{\frac{p}{1-p}}\\
+\theta = \log{\frac{p}{1-p}}
 -A(\theta) = \log{1-p}
 \end{align*}
 $$
